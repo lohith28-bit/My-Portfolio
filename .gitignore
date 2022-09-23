@@ -7,10 +7,14 @@
 
 # testing
 /coverage
-
+.env
 # production
-/build
-
+build
+src/language
+src/cv
+src/img
+src/Components/Main/Service.jsx
+src/context
 # misc
 .DS_Store
 .env.local

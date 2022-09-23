@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import {
+    Route,
+    Routes,
+} from "react-router-dom";
 import './App.css';
 
+/* Pages */
+import Home from "./pages/Home/HomePage";
+import About from "./pages/About/AboutPage";
+import Project from "./pages/Project/ProjectPage";
+
+import RouterScrollTop from "./components/ScrollToTop/RouterScrollTop"
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
+    }, [])
+    return (
+        <>
+            <RouterScrollTop />
+            {
+                loading ?
+
+                    <div className='loading-pag'>
+                        <div className="loader">
+                        <span>Lohith V P ✨</span>
+                            <span>Lohith V P ✨</span>
+                        </div>
+                    </div>
+
+                    :
+
+                    <Routes>
+                        <Route path="/" element={<Home />}></Route>
+                        <Route exact path="/about" element={<About />}></Route>
+                        <Route exact path="/project" element={<Project />}></Route>
+                    </Routes>
+
+            }
+
+        </>
+    )
 }
 
-export default App;
+export default App
