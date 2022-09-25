@@ -61,13 +61,13 @@ body.dark .skill h5 {
   color: #000;
 }
 
-body.dark main section .row .columns .skill img {
+/* body.dark main section .row .columns .skill img {
   filter: grayscale(100%);
 }
 
 body.dark main section .row .columns .skill img:hover {
   filter: grayscale(0);
-}
+} */
 
 /********************** Servicios **********************/
 

@@ -3,7 +3,7 @@ import '../../pages/About/AboutPage.css'
 import { Link } from 'react-router-dom';
 import cv from '../../cv/cv.pdf';
 import { ButtomGet } from '../ButtomGet/ButtomGet';
-import  e1 from "./../../img/express-cropped.svg";
+import  e1 from "./../../img/express.png";
 
 
 const About = () => (
@@ -88,10 +88,10 @@ const About = () => (
                         <img alt="React" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
                         <h5>React</h5>
                     </div>
-                    <div>
+                    {/* <div>
                         <img alt="Typescript" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
                         <h5>Typescript</h5>
-                    </div>
+                    </div> */}
                     <div>
                         <img alt="Nodejs" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                         <h5>NodeJs</h5>
@@ -104,10 +104,10 @@ const About = () => (
                         <img alt="mongodb" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg" />
                         <h5>MongodDB</h5>
                     </div>
-                    <div>
+                    {/* <div>
                         <img alt="figma" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" title="figma" />
                         <h5>Figma</h5>
-                    </div>
+                    </div> */}
                     <div>
                         <img alt="Visual Studio Code" className="icons-skils" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" title="Visual Studio Code" />
                         <h5>VS Code</h5></div>
