@@ -2,11 +2,10 @@ import React from 'react';
 import '../../pages/Contact/ContactPage.css'
 /* TypedJs */
 import Typical from 'react-typical';
+// const {number, username} = process.env;
 
-const {number, username} = process.env;
-
-const whatsappLink = `https://api.whatsapp.com/send?phone=${number}`;
-const telegramLink = `https://t.me/${username}`;
+// const whatsappLink = `https://api.whatsapp.com/send?phone=${number}`;
+// const telegramLink = `https://t.me/${username}`;
 
 const Contact = () => (
 
@@ -22,7 +21,6 @@ const Contact = () => (
                 wrapper="b"
                 steps={[
                     'Gmail', 1600,
-                    'WhatsApp', 1600,
                     'Telegram', 1600,
                     'Linkedin', 1600,
                     'Github', 1600,
@@ -44,7 +42,7 @@ const Contact = () => (
                     Gmail
                 </div>
             </a>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            {/* <a href="https://api.whatsapp.com/send?phone=7022820680" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>
@@ -55,8 +53,8 @@ const Contact = () => (
                 <div className="text">
                     Whatsapp
                 </div>
-            </a>
-            <a href={telegramLink} target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
+            </a> */}
+            <a href="https://t.me/Its_lohith" target="_blank" rel="noopener noreferrer" data-aos="zoom-in">
                 <div className="layer">
                     <span></span>
                     <span></span>

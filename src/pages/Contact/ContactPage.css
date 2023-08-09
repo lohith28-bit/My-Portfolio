@@ -87,8 +87,8 @@
 }
 .icons a:nth-child(2) .layer span,
 .icons a:nth-child(2) .text{
-    color: #4fc35b;
-    border-color: #4fc35b;
+    color: #1DA1F2;
+    border-color: #1DA1F2;
 }
 /* .icons a:nth-child(3) .layer span,
 .icons a:nth-child(3) .text{
@@ -97,35 +97,35 @@
 } */
 .icons a:nth-child(3) .layer span,
 .icons a:nth-child(3) .text{
-    color: #1DA1F2;
-    border-color: #1DA1F2;
-}
-.icons a:nth-child(4) .layer span,
-.icons a:nth-child(4) .text{
     color: #2867B2;
     border-color: #2867B2;
 }
-.icons a:nth-child(5) .layer span,
-.icons a:nth-child(5) .text{
+.icons a:nth-child(4) .layer span,
+.icons a:nth-child(4) .text{
     color: #83878D;
     border-color: #83878D;
 }
+/* .icons a:nth-child(5) .layer span,
+.icons a:nth-child(5) .text{
+    color: #83878D;
+    border-color: #83878D;
+} */
 
 .icons a:hover:nth-child(1) .layer span{
     box-shadow: -1px 1px 3px #ff0000;
 }
 .icons a:hover:nth-child(2) .layer span{
-    box-shadow: -1px 1px 3px #4fc35b;
-}
-.icons a:hover:nth-child(3) .layer span{
-    box-shadow: -1px 1px 3px #E1306C;
-}
-.icons a:hover:nth-child(4) .layer span{
     box-shadow: -1px 1px 3px #1DA1F2;
 }
-.icons a:hover:nth-child(5) .layer span{
+.icons a:hover:nth-child(3) .layer span{
     box-shadow: -1px 1px 3px #4267B2;
 }
+.icons a:hover:nth-child(4) .layer span{
+    box-shadow: -1px 1px 3px #83878D
+}
+/* .icons a:hover:nth-child(5) .layer span{
+    box-shadow: -1px 1px 3px #83878D;
+} */
 .icons a .text{
     position: absolute;
     left: 50%;

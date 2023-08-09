@@ -74,6 +74,25 @@ const Project = () => {
                     </SwiperSlide>
                     <SwiperSlide className='caja'>
                         <img
+                            src={proyectImg(`./Coco-cola.png`)}
+                            alt='projects'
+
+                        />
+                        <div className="content">
+                            <h3>Clone</h3>
+                            <p>
+                                This is the Coco-Cola company website clone
+                            </p>
+                            <p className="tecnologias">
+                                React.js 
+                                <span>-</span>Tailwindcss
+                            </p>
+                            <a href="https://coco-cola-company-lohithvp.netlify.app/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
+                            <a href="https://github.com/lohith28-bit/Coco-Cola-clone" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='caja'>
+                        <img
                             src={proyectImg(`./color_Hex.png`)}
                             alt='project'
                         />
@@ -86,7 +105,7 @@ const Project = () => {
                                 HTML5
                                 <span>-</span> CSS3
                                 <span>-</span> JavaScript
-                                <span>-</span> React
+                                <span>-</span> React.js
                             </p>
                             <a href="https://hexacode-converter.netlify.app/" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
                             <a href="https://github.com/lohith28-bit/ColorName-to-Hexacode.git" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
@@ -127,7 +146,7 @@ const Project = () => {
                                 <span>-</span> CSS3
                                 <span>-</span> JavaScript
                                 <span>-</span> Bootstrap
-                                <span>-</span> React
+                                <span>-</span> React.js
                             </p>
                             {/* <a href="" className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a> */}
                             <a href='https://github.com/lohith28-bit/NewsApp.git' className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
@@ -147,7 +166,7 @@ const Project = () => {
                                 HTML5
                                 <span>-</span> CSS3
                                 <span>-</span> JavaScript
-                                <span>-</span> React
+                                <span>-</span> React.js
                             </p>
                             <a href='https://modern-ui-landingpage1.netlify.app/' className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
                             <a href="https://github.com/lohith28-bit/Modern-UI-design.git" className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
