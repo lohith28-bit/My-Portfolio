@@ -23,7 +23,7 @@ const Content = () => (
                 </p>
                 <h1 data-aos="fade-up" data-aos-delay="800"> I am Lohith V P
                 </h1>
-                <p data-aos="fade-up" data-aos-delay="1000">web developer
+                <p data-aos="fade-up" data-aos-delay="1000">Software engineer
                 </p>
 
                 <div className="redes-sociales" >

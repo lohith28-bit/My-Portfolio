@@ -1,136 +1,185 @@
 import React from 'react';
+import { useEffect,useState } from 'react';
 import '../../pages/About/AboutPage.css'
-import { Link } from 'react-router-dom';
 import cv from '../../cv/cv.pdf';
-import { ButtomGet } from '../ButtomGet/ButtomGet';
-import  e1 from "./../../img/express.png";
+import e1 from "./../../img/express.png";
 
 
-const About = () => (
-    <section className="sobre-mi" id="sobre-mi">
-        <h2 className="heading">
-            About me
-        </h2>
+const About = () => {
 
-        <div className="row container">
-            <div className="columns" data-aos="fade-right" data-aos-delay="300">
-                <h3>who I am
-                </h3>
-                <h4>My name is Lohith V P and I am a web developer.
-                </h4>
-                <p>I have been working on web designing and web development for 7 months. I have always been passionate about learning new skills and trying to improve myself every day as a developer.
-                </p>
-                <ul>
-                    <li>
-                        <p>
-                            <span>Age:{" "}
-                            </span>
-                             22
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <span>
-                                Hobbies:{" "}
-                            </span>
-                                Movies, Cricket and Programming
-                        </p>
-                    </li>
-                    <li>
-                        <p><span>Email:</span> lohithvp18@gmail.com</p>
-                    </li>
-                    <li>
-                        <p>
-                            <span>From:{" "}
-                            </span>
-                            Udupi, Karnataka
-                        </p>
-                    </li>
-                </ul>
-                <div className="mas-info">
-                    <a href={cv} target="_blank" rel="noopener noreferrer" download="cv.pdf" className="btn-codigo buttonDownload">Download CV
-                    </a>
-                    {/* <div className='mas-info-btn'>
+    const [age, setAge] = useState(() => {
+        // Initialize the age to 22
+        const savedAge = localStorage.getItem('age');
+        return savedAge ? parseInt(savedAge) : 22;
+    });
+
+    useEffect(() => {
+        const today = new Date();
+        const month = today.getMonth();
+        const date = today.getDate();
+        const year = today.getFullYear();
+
+        // Check if today is June 18th or later in the current year
+        if ((month === 5 && date >= 18) || month > 5) {
+            const lastUpdated = localStorage.getItem('lastUpdated');
+            const lastUpdatedDate = lastUpdated ? new Date(lastUpdated) : null;
+
+            if (!lastUpdatedDate || lastUpdatedDate.getFullYear() < year) {
+                setAge((prevAge) => {
+                    const newAge = prevAge + 1;
+                    localStorage.setItem('age', newAge);
+                    localStorage.setItem('lastUpdated', today.toString());
+                    return newAge;
+                });
+            }
+        }
+    }, []);
+
+    return (
+        <section className="sobre-mi" id="sobre-mi">
+            <h2 className="heading">
+                About me
+            </h2>
+
+            <div className="row container">
+                <div className="columns" data-aos="fade-right" data-aos-delay="300">
+                    <h3>who I am
+                    </h3>
+                    <h4>My name is Lohith V P and I am a Software Engineer.
+                    </h4>
+                    <p>I am currently working as a Software Engineer Trainee at Trianz. I worked on a VM migration project, focusing on pre-migration steps to ensure a smooth transition. Along with that, I have a strong background in web development with the MERN stack and am skilled with AWS and Linux as well.
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                <span>Age:{" "}
+                                </span>
+                                {age}
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>
+                                    Hobbies:{" "}
+                                </span>
+                                Anime, Cricket and Badminton
+                            </p>
+                        </li>
+                        <li>
+                            <p><span>Email:</span> lohithvp18@gmail.com</p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>From:{" "}
+                                </span>
+                                Bengaluru, Karnataka
+                            </p>
+                        </li>
+                    </ul>
+                    <div className="mas-info">
+                        <a href={cv} target="_blank" rel="noopener noreferrer" download="cv.pdf" className="btn-codigo buttonDownload">Download CV
+                        </a>
+                        {/* <div className='mas-info-btn'>
                     <Link to="/about">
                         <ButtomGet/>
                     </Link>
                     </div> */}
+                    </div>
                 </div>
-            </div>
-            <div className="columns col-skill" data-aos="fade-left" data-aos-delay="650">
-                <h3>skills</h3>
-                <div className="skill">
-                    <div>
-                        <img alt="HTML" className="icons-skils" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
-                        <h5>HTML</h5>
-                    </div>
-                    <div>
-                        <img alt="CSS" className="icons-skils" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
-                        <h5>CSS</h5>
-                    </div>
-                    <div>
-                        <img alt="Js" className="icons-skils" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" />
-                        <h5>JavaScript</h5>
-                    </div>
-                    <div>
-                        <img alt="Bootstrap" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
-                        <h5>Bootstrap</h5>
-                    </div>
-                    <div>
-                        <img alt="Tailwindcss" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
-                        <h5>Tailwindcss</h5>
-                    </div>
-                    {/* <div>
+                <div className="columns col-skill" data-aos="fade-left" data-aos-delay="650">
+                    <h3>skills</h3>
+                    <div className="skill">
+                        <div>
+                            <img alt="HTML" className="icons-skils" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" />
+                            <h5>HTML</h5>
+                        </div>
+                        <div>
+                            <img alt="CSS" className="icons-skils" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" />
+                            <h5>CSS</h5>
+                        </div>
+                        <div>
+                            <img alt="Js" className="icons-skils" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" />
+                            <h5>JavaScript</h5>
+                        </div>
+                        <div>
+                            <img alt="Bootstrap" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+                            <h5>Bootstrap</h5>
+                        </div>
+                        <div>
+                            <img alt="Tailwindcss" className="icons-skils" src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_tailwind_icon_130128.png" />
+                            <h5>Tailwindcss</h5>
+                        </div>
+                        {/* <div>
                         <img alt="jQuery" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg" />
                         <h5>jQuery</h5>
                     </div> */}
-                    <div>
-                        <img alt="React" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                        <h5>React</h5>
-                    </div>
-                    {/* <div>
+                        <div>
+                            <img alt="React" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                            <h5>React</h5>
+                        </div>
+                        {/* <div>
                         <img alt="Typescript" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
                         <h5>Typescript</h5>
                     </div> */}
-                    <div>
-                        <img alt="Nodejs" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                        <h5>NodeJs</h5>
-                    </div>
-                    <div>
-                        <img alt="express" className="icons-skils" src={e1} />
-                        <h5>Express</h5>
-                    </div>
-                    <div>
-                        <img alt="mongodb" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg" />
-                        <h5>MongodDB</h5>
-                    </div>
-                    {/* <div>
+                        <div>
+                            <img alt="Nodejs" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                            <h5>NodeJs</h5>
+                        </div>
+                        <div>
+                            <img alt="express" className="icons-skils" src={e1} />
+                            <h5>Express</h5>
+                        </div>
+                        <div>
+                            <img alt="mongodb" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg" />
+                            <h5>MongodDB</h5>
+                        </div>
+                        {/* <div>
                         <img alt="figma" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" title="figma" />
                         <h5>Figma</h5>
                     </div> */}
-                    <div>
-                        <img alt="Visual Studio Code" className="icons-skils" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png"/>
-                        <h5>VS Code</h5></div>
-                    <div>
-                        <img alt="git" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
-                        <h5>Git</h5>
-                    </div>
-                    <div>
-                        <img alt="java" className="icons-skils" src="https://www.vectorlogo.zone/logos/java/java-icon.svg" />
-                        <h5>Java</h5>
-                    </div>
-                    <div>
-                        <img alt="python" className="icons-skils" src="https://www.vectorlogo.zone/logos/python/python-icon.svg"/>
-                        <h5>Python</h5>
-                    </div>
-                    <div>
-                        <img alt="c++" className="icons-skils" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
-                        <h5>C++</h5>
+                        {/* <div>
+                            <img alt="Visual Studio Code" className="icons-skils" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" />
+                            <h5>VS Code</h5></div>
+                        <div> */}
+                        <div>
+                            <img alt="AWS" className="icons-skils" src="https://wallpapers.com/images/hd/a-w-s-cloud-logo-ej8ve3tdkcqo008x-2.jpg" />
+                            <h5>AWS</h5>
+                        </div>
+
+                        <div>
+                            <img alt="java" className="icons-skils" src="https://www.vectorlogo.zone/logos/java/java-icon.svg" />
+                            <h5>Java</h5>
+                        </div>
+                        <div>
+                            <img alt="git" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                            <h5>Git</h5>
+                        </div>
+                        {/* <div>
+                            <img alt="Linux" className="icons-skils" src="https://toppng.com/uploads/preview/linux-logo-11536003931qjau2fbu8g.png" />
+                            <h5>Linux</h5>
+                        </div> */}
+                        <div>
+                            <img alt="Linux" className="icons-skils" src="https://m.media-amazon.com/images/I/61SC+vgMGfL._AC_UF1000,1000_QL80_.jpg" />
+                            <h5>Linux</h5>
+                        </div>
+                        {/* <div>
+                            <img alt="Linux" className="icons-skils" src="https://www.screenconnect.com/Images/LogoLinux.png" />
+                            <h5>Linux</h5>
+                        </div> */}
+
+                        <div>
+                            <img alt="python" className="icons-skils" src="https://www.vectorlogo.zone/logos/python/python-icon.svg" />
+                            <h5>Python</h5>
+                        </div>
+                        {/* <div>
+                            <img alt="c++" className="icons-skils" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
+                            <h5>C++</h5>
+                        </div> */}
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    )
+};
 
 export default React.memo(About);

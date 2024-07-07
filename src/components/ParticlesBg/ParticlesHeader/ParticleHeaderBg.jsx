@@ -188,6 +188,16 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
+                  src: "https://wallpapers.com/images/hd/a-w-s-cloud-logo-ej8ve3tdkcqo008x-2.jpg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://m.media-amazon.com/images/I/61SC+vgMGfL._AC_UF1000,1000_QL80_.jpg",
+                  width: 20,
+                  height: 20,
+                },
+                {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
                   width: 20,
                   height: 20,
