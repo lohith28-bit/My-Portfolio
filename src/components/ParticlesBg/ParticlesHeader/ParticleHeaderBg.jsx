@@ -1,27 +1,29 @@
 import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import express from "./../../../img/express-cropped.svg"
+// import express from "./../../../img/express-cropped.svg"
+import e1 from "./../../../img/express.png"
+// import e1 from "./../../img/express.png";
 
 export default function ParticleHeaderBg() {
-    const particlesInit = async (main) => {
-        console.log(main);
-    
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(main);
-      };
-    
-      const particlesLoaded = (container) => {
-        console.log(container);
-      };
-      return (
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          className="particles-2-css"
+  const particlesInit = async (main) => {
+    console.log(main);
+
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(main);
+  };
+
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+  return (
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      className="particles-2-css"
       options={{
         background: {
           position: "50% 50%",
@@ -33,7 +35,7 @@ export default function ParticleHeaderBg() {
           enable: false
         },
         interactivity: {
-          
+
           modes: {
             bubble: {
               distance: 400,
@@ -163,11 +165,6 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
                   width: 20,
                   height: 20,
@@ -198,11 +195,6 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
                   width: 20,
                   height: 20,
@@ -213,17 +205,32 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
                   src: "https://www.vectorlogo.zone/logos/python/python-icon.svg",
                   width: 20,
                   height: 20,
                 },
                 {
                   src: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://konsultanitbandung.net/wp-content/uploads/2020/09/spring-3-logo-png-transparent.png",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://seeklogo.com/images/D/docker-logo-CF97D0124B-seeklogo.com.png",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://www.vectorlogo.zone/logos/mysql/mysql-official.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: { e1 },
                   width: 20,
                   height: 20,
                 },
@@ -250,11 +257,6 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-plain-wordmark.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
                   width: 20,
                   height: 20,
@@ -275,22 +277,12 @@ export default function ParticleHeaderBg() {
                   height: 20,
                 },
                 {
-                  src: {express},
+                  src: { e1 },
                   width: 20,
                   height: 20,
                 },
                 {
                   src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
                   width: 20,
                   height: 20,
                 },
@@ -316,6 +308,21 @@ export default function ParticleHeaderBg() {
                 },
                 {
                   src: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://konsultanitbandung.net/wp-content/uploads/2020/09/spring-3-logo-png-transparent.png",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://seeklogo.com/images/D/docker-logo-CF97D0124B-seeklogo.com.png",
+                  width: 20,
+                  height: 20,
+                },
+                {
+                  src: "https://www.vectorlogo.zone/logos/mysql/mysql-official.svg",
                   width: 20,
                   height: 20,
                 },

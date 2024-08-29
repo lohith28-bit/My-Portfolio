@@ -47,7 +47,7 @@ const About = () => {
                     </h3>
                     <h4>My name is Lohith V P and I am a Software Engineer.
                     </h4>
-                    <p>I am currently working as a Software Engineer Trainee at Trianz. I worked on a VM migration project, focusing on pre-migration steps to ensure a smooth transition. Along with that, I have a strong background in web development with the MERN stack and am skilled with AWS and Linux as well.
+                    <p>I am currently working as a Software Engineer Trainee at Trianz, where I focus on VM migration projects, specifically on pre-migration steps to ensure seamless transitions. In addition, I have a solid background in web development using the MERN stack and Spring Boot. I am also skilled in AWS, Docker, MySQL , Microservices and Linux.
                     </p>
                     <ul>
                         <li>
@@ -134,10 +134,6 @@ const About = () => {
                             <h5>MongodDB</h5>
                         </div>
                         {/* <div>
-                        <img alt="figma" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" title="figma" />
-                        <h5>Figma</h5>
-                    </div> */}
-                        {/* <div>
                             <img alt="Visual Studio Code" className="icons-skils" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1200px-Visual_Studio_Code_1.18_icon.svg.png" />
                             <h5>VS Code</h5></div>
                         <div> */}
@@ -154,27 +150,26 @@ const About = () => {
                             <img alt="git" className="icons-skils" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
                             <h5>Git</h5>
                         </div>
-                        {/* <div>
-                            <img alt="Linux" className="icons-skils" src="https://toppng.com/uploads/preview/linux-logo-11536003931qjau2fbu8g.png" />
-                            <h5>Linux</h5>
-                        </div> */}
+                        <div>
+                            <img alt="SpringBoot" className="icons-skils" src="https://konsultanitbandung.net/wp-content/uploads/2020/09/spring-3-logo-png-transparent.png" />
+                            <h5>SpringBoot</h5>
+                        </div>
+                        <div>
+                            <img alt="Docker" className="icons-skils" src="https://seeklogo.com/images/D/docker-logo-CF97D0124B-seeklogo.com.png" />
+                            <h5>Docker</h5>
+                        </div>
+                        <div>
+                            <img alt="MySQL" className="icons-skils" src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg" />
+                            <h5>MySQL</h5>
+                        </div>
                         <div>
                             <img alt="Linux" className="icons-skils" src="https://m.media-amazon.com/images/I/61SC+vgMGfL._AC_UF1000,1000_QL80_.jpg" />
                             <h5>Linux</h5>
                         </div>
-                        {/* <div>
-                            <img alt="Linux" className="icons-skils" src="https://www.screenconnect.com/Images/LogoLinux.png" />
-                            <h5>Linux</h5>
-                        </div> */}
-
                         <div>
                             <img alt="python" className="icons-skils" src="https://www.vectorlogo.zone/logos/python/python-icon.svg" />
                             <h5>Python</h5>
                         </div>
-                        {/* <div>
-                            <img alt="c++" className="icons-skils" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" />
-                            <h5>C++</h5>
-                        </div> */}
                     </div>
                 </div>
             </div>

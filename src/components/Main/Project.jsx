@@ -117,7 +117,7 @@ const Project = () => {
                             alt='project'
                         />
                         <div className="content">
-                            <h3>Blood Bank Website</h3>
+                            <h3>BloodConnect</h3>
                             <p>
                                 Gives the complete connection between patients, hospitals, donors
                             </p>
@@ -129,6 +129,7 @@ const Project = () => {
                             </p>
                             {/* <a href className="custom-btn btn" target="_blank" rel="noopener noreferrer"><span>Demo</span></a>
                             <a href className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a> */}
+                            <a href='https://github.com/lohith28-bit/BloodConnect.git' className="custom-btn btn-codigo" target="_blank" rel="noopener noreferrer">Repository</a>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide className='caja'>
